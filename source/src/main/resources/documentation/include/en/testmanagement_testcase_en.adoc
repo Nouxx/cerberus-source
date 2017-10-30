@@ -183,6 +183,33 @@ image:windowmanageproperties.png[windowManageProperties]
 
 |=== 
 
+There are different types of Property which defines the way to access the relevant data. (not complete yet)
+
+|=== 
+
+| *Property Type* | *Description*  
+
+| text | Static string defined by user.
+
+| getFromDataLib | Get one or multiple information (string or number) from a Database request.
+
+| getFromJS | Get a result from a Javascript execution.
+
+| getFromJSON | Parse a single field of the last JSON file.
+
+| getFromGroovy | Get a result from a Groovy script.
+
+|=== 
+
+"Groovy is an object-oriented programming language for the Java platform" (wikipedia). Its syntax is pretty simple but, unlike Javascript execution, it not recommended to use any return or print statement in Cerberus. The result of the script will be the value of the last defined variable. Consequently, you can :
+- create a new variable at the end of your script and assign the correct value to it.
+- use the last line of your script to perform an operation on the desired result variable.
+
+See example: 
+image:testcasegroovyexample.png[TestCaseGroovyExample]
+
+This command wil return "cerberus testing" as a String to be used in the Test Case.
+
 ==== Variables
 
 You can use variables in many area of Cerberus. Those variable are used in order to perform some actions of controls in a dynamic way.
